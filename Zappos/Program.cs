@@ -109,7 +109,7 @@ namespace Zappos
                  or
                  (Discount > 20 and email sent but new discount > old discount)
                 */
-                if ((discount > 5) && ((!ur.sent || (ur.sent && ur.lastDiscount < discount))))
+                if ((discount > 20) && ((!ur.sent || (ur.sent && ur.lastDiscount < discount))))
                 {
                     SendEmail(ur.email, p.productName, discount);
                     MarkSent(ur, discount);
